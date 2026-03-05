@@ -2,7 +2,17 @@
 
 A static 2D space-shooter scene built with **OpenGL (GLUT/GLEW)** for the Computer Graphics course (Spring 2026, Assignment 1).
 
-## Screenshot Concept
+## Screenshots
+
+### Orthographic Projection
+
+![Orthographic Projection](Screenshots/Orthographic%20projection.png)
+
+### Perspective Projection
+
+![Perspective Projection](Screenshots/Perspective%20projection.png)
+
+## Scene Layers
 
 The scene features three layered objects rendered at different depths:
 
@@ -29,6 +39,9 @@ Assignment_1/
 │   ├── HUD.cpp         # HUD text rendering
 │   ├── Primitives.cpp  # OpenGL primitive drawing functions
 │   └── Spaceship.cpp   # Spaceship drawing implementation
+├── Screenshots/        # Application screenshots
+│   ├── Orthographic projection.png
+│   └── Perspective projection.png
 ├── Assignment_1.sln    # Visual Studio solution
 ├── Assignment_1.vcxproj
 ├── Assignment_1.vcxproj.filters
