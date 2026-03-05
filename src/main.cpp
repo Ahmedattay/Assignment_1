@@ -16,6 +16,7 @@
 
 #include <GL/glew.h>
 #include <GL/glut.h>
+#include <cstdio>
 
 #include "Spaceship.h"
 #include "Alien.h"
@@ -99,11 +100,29 @@ static void display()
 static void keyboard(unsigned char key, int /*x*/, int /*y*/)
 {
     switch (key) {
-        case 'o': case 'O': usePerspective = false; break;
-        case 'p': case 'P': usePerspective = true;  break;
-        case 27:             exit(0);                break;     // ESC
+        case 'o': case 'O':
+            usePerspective = false;
+            printf("[Key] Switched to ORTHOGRAPHIC projection\n");
+            break;
+        case 'p': case 'P':
+            usePerspective = true;
+            printf("[Key] Switched to PERSPECTIVE projection\n");
+            break;
+        case 27:
+            printf("[Key] ESC pressed – exiting\n");
+            exit(0);
+            break;
     }
     glutPostRedisplay();
+}
+
+// ---------------------------------------------------------------
+//  GLUT reshape callback
+// ---------------------------------------------------------------
+static void reshape(int w, int h)
+{
+    if (h == 0) h = 1;
+    glViewport(0, 0, w, h);
 }
 
 // ---------------------------------------------------------------
@@ -133,7 +152,11 @@ int main(int argc, char** argv)
     initGL();
 
     glutDisplayFunc(display);
+    glutReshapeFunc(reshape);
     glutKeyboardFunc(keyboard);
+
+    printf("Controls: O=Ortho, P=Perspective, ESC=Exit\n");
+    printf("Click the OpenGL window first, then press keys.\n");
 
     glutMainLoop();
     return 0;

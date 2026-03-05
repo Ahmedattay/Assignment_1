@@ -80,6 +80,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -94,6 +95,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -108,6 +110,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -122,6 +125,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -132,19 +136,19 @@
   </ItemDefinitionGroup>
 
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="Primitives.cpp" />
-    <ClCompile Include="Spaceship.cpp" />
-    <ClCompile Include="Alien.cpp" />
-    <ClCompile Include="Background.cpp" />
-    <ClCompile Include="HUD.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\Primitives.cpp" />
+    <ClCompile Include="src\Spaceship.cpp" />
+    <ClCompile Include="src\Alien.cpp" />
+    <ClCompile Include="src\Background.cpp" />
+    <ClCompile Include="src\HUD.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Primitives.h" />
-    <ClInclude Include="Spaceship.h" />
-    <ClInclude Include="Alien.h" />
-    <ClInclude Include="Background.h" />
-    <ClInclude Include="HUD.h" />
+    <ClInclude Include="include\Primitives.h" />
+    <ClInclude Include="include\Spaceship.h" />
+    <ClInclude Include="include\Alien.h" />
+    <ClInclude Include="include\Background.h" />
+    <ClInclude Include="include\HUD.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
