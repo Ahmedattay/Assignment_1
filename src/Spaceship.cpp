@@ -71,6 +71,33 @@ static void drawEngineFlames()
                  1.0f, 0.6f, 0.0f);            // orange
 }
 
+static void drawBullet()
+{
+    const float halfW = 0.012f;
+    const float shaft = 0.06f;
+    const float tipLen = 0.025f;
+
+    float bulletX = -0.45f; 
+    float startY[3] = {-0.0f, -0.10f,-0.20f};
+
+    for (int i = 0; i < 3; i++)
+    {
+        float bulletY = startY[i];
+
+        // Shaft
+        drawRect(bulletX - halfW, bulletY,
+            bulletX + halfW, bulletY + shaft,
+            Z,
+            1.0f, 1.0f, 0.1f);
+
+        // Tip
+        drawTriangle(bulletX - halfW, bulletY + shaft,
+            bulletX + halfW, bulletY + shaft,
+            bulletX, bulletY + shaft + tipLen,
+            Z,
+            1.0f, 1.0f, 1.0f);
+    }
+}
 // ---------------------------------------------------------------
 //  Public: draw the entire spaceship
 // ---------------------------------------------------------------
@@ -82,4 +109,5 @@ void drawSpaceship()
     drawRightWing();
     drawCockpit();
     drawEngineFlames();
+    drawBullet();
 }
