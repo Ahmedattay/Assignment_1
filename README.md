@@ -1,3 +1,5 @@
+https://docs.google.com/videos/d/104iQ5FOZJ7Um5Kq9gRGmec8zvOBBN8RP1wfosm3Kigs/edit?usp=sharing
+
 # Space Shooter — 2D Arcade Scene
 
 A static 2D space-shooter scene built with **OpenGL (GLUT/GLEW)** for the Computer Graphics course (Spring 2026, Assignment 1).
