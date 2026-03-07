@@ -10,6 +10,8 @@
 
 // Depth constant – middle layer
 static const float Z = -3.0f;
+// Slightly closer depth for face details so they are not rejected by depth test.
+static const float Z_FACE = Z + 0.01f;
 
 // ---------------------------------------------------------------
 //  Individual part functions
@@ -47,15 +49,15 @@ static void drawRightHorn()
 
 static void drawEyes()
 {
-    drawCircle(0.40f, 0.53f, Z, 0.030f,
+    drawCircle(0.40f, 0.53f, Z_FACE, 0.030f,
                1.0f, 0.0f, 0.0f);              // left eye – red
-    drawCircle(0.50f, 0.53f, Z, 0.030f,
+    drawCircle(0.50f, 0.53f, Z_FACE, 0.030f,
                1.0f, 0.0f, 0.0f);              // right eye – red
 }
 
 static void drawMouth()
 {
-    drawRect(0.40f, 0.42f, 0.50f, 0.44f, Z,
+    drawRect(0.40f, 0.42f, 0.50f, 0.44f, Z_FACE,
              0.0f, 0.3f, 0.0f);                // dark green
 }
 

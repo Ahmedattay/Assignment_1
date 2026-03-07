@@ -84,3 +84,12 @@ This assignment was developed as a 3-member team project, where each member was 
 1. **Spaceship** (Player) — `Spaceship.cpp`
 2. **Alien Enemy** — `Alien.cpp`
 3. **Planet & Background** — `Background.cpp`
+
+## Team Members
+
+| Name | Student ID |
+|------|------------|
+| Ali Mahmoud Ahmed | 1230338 |
+| Ahmed Attay Kamal | 1230011 |
+| Mahmoud Mohamed Abdelfattah | 4220142 |
+| Seif Allah Alaa Mohamed | 1200324 |
